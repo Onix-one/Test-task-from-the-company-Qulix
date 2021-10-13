@@ -1,3 +1,3 @@
-# ProjectZ
-# SQL Script  ProjectZDb.sql  into folder ProjectZ
+# Name "ProjectZ"
+# !!! SQL Script  ProjectZDb.sql  into folder ProjectZ
 # Everything works
