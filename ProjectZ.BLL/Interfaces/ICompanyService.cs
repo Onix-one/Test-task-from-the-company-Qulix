@@ -2,8 +2,5 @@
 
 namespace ProjectZ.BLL.Interfaces
 {
-    public interface ICompanyService : IEntityService<Company>
-    {
-
-    }
+    public interface ICompanyService : IEntityService<Company> { }
 }

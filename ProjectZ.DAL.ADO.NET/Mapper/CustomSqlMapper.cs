@@ -44,7 +44,8 @@ namespace ProjectZ.DAL.ADO.NET.Mapper
             };
             return company;
         }
-        public Company MapCompanySqlModelToCompanyWithoutEmployees(CompanySqlModel companySqlModel)
+
+        private Company MapCompanySqlModelToCompanyWithoutEmployees(CompanySqlModel companySqlModel)
         {
             var company = new Company
             {
@@ -117,7 +118,7 @@ namespace ProjectZ.DAL.ADO.NET.Mapper
             };
             return company;
         }
-        public IEnumerable<Employee> MapCollectionEmployeeSqlModelToEmployee(IEnumerable<EmployeeSqlModel> collectionEmployeeSqlModel)
+        private IEnumerable<Employee> MapCollectionEmployeeSqlModelToEmployee(IEnumerable<EmployeeSqlModel> collectionEmployeeSqlModel)
         {
             var employees = new List<Employee>();
             foreach (var employeeSqlModel in collectionEmployeeSqlModel)

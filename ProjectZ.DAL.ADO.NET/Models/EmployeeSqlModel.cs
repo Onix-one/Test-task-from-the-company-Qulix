@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ProjectZ.BLL.Enums;
 using ProjectZ.BLL.Models;
 
 namespace ProjectZ.DAL.ADO.NET.Models

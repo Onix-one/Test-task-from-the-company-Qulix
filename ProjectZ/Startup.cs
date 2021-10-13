@@ -17,6 +17,7 @@ using ProjectZ.BLL.Services;
 using ProjectZ.DAL.ADO.NET.Mapper;
 using ProjectZ.DAL.ADO.NET.Repositories;
 using ProjectZ.DAL.Interfaces;
+using ProjectZ.Extensions;
 using ProjectZ.Mapper;
 
 namespace ProjectZ
@@ -27,30 +28,19 @@ namespace ProjectZ
         {
             Configuration = configuration;
         }
+        private IConfiguration Configuration { get; }
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Инжектим строку подключения
             services.AddTransient<IDbConnection, SqlConnection>
                 (connection => new SqlConnection(Configuration.GetConnectionString("msSql")));
-
-            services.AddScoped<IEntityService<Company>, EntityService<Company>>();
-            services.AddScoped<IEntityService<Employee>, EntityService<Employee>>();
-            
-            services.AddScoped<CustomSqlMapper, CustomSqlMapper>();
-            services.AddScoped<CustomViewModelMapper, CustomViewModelMapper>();
-
-            //services.AddScoped<SqlCompanyRepository, SqlCompanyRepository>();
-
-            services.AddScoped<IRepository<Company>, SqlCompanyRepository>();
-            services.AddScoped<IRepository<Employee>, SqlEmployeeRepository>();
+            //Два метода расширения для DI
+            services.AddRepositories();
+            services.AddEntitiesServices();
 
             services.AddControllersWithViews();
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -60,7 +50,6 @@ namespace ProjectZ
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();

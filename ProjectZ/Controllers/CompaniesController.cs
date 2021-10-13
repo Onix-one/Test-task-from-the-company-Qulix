@@ -21,7 +21,6 @@ namespace ProjectZ.Controllers
             _logger = logger;
             _companyService = companyService;
         }
-
         public async Task<IActionResult> Index()
         {
             try
