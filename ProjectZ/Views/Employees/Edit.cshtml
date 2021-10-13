@@ -1,0 +1,74 @@
+﻿
+@using ProjectZ.BLL.Enums
+@{
+  
+    IEnumerable<CompanyViewModel> companies = ViewBag.Companies;
+}
+
+@model EmployeeViewModel
+
+
+<div class="container">
+    @if (Model.Id != 0)
+    {
+        <h2>Edit</h2>
+    }
+    else
+    {
+        <h2>Create</h2>
+    }
+<form asp-controller="Employees" asp-action="Edit" method="post">
+    <div>
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstName">First Name:</label>
+        <input asp-for="FirstName" type="text" class="form-control">
+        <span class="alert-danger" asp-validation-for="FirstName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName">Last Name:</label>
+        <input asp-for="LastName" type="text" class="form-control">
+        <span class="alert-danger" asp-validation-for="LastName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MiddleName">Middle Name:</label>
+        <input asp-for="MiddleName" type="text" class="form-control">
+        <span class="alert-danger" asp-validation-for="MiddleName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HiringDate">Hiring Date:</label>
+        <input asp-for="HiringDate" id="hire-date" class="form-control" type="date">
+        <span class="alert-danger" asp-validation-for="HiringDate"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Position">Position:</label>
+        <select asp-for="Position" class="form-control">
+            <option selected value="">Choose...</option>
+            <option value="@WorkingPosition.Manager">@WorkingPosition.Manager.ToString()</option>
+            <option value="@WorkingPosition.Developer">@WorkingPosition.Developer.ToString()</option>
+            <option value="@WorkingPosition.BusinessAnalyst">@WorkingPosition.BusinessAnalyst.ToString()</option>
+            <option value="@WorkingPosition.Tester">@WorkingPosition.Tester.ToString()</option>
+        </select>
+        <span class="alert-danger" asp-validation-for="Position"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CompanyId">Legal status:</label>
+        <select asp-for="CompanyId" class="form-control" id="sel1">
+            <option selected value="">Choose...</option>
+            @foreach (var company in companies)
+            {
+                <option value="@company.Id">@company.Name</option>
+            }
+        </select>
+        <span class="alert-danger" asp-validation-for="CompanyId"></span>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9 text-secondary">
+            <button type="submit" class="btn btn-outline-primary px-4">Save</button>
+            <a type="button" class="btn btn-outline-danger px-4" asp-action="Index">Close</a>
+        </div>
+    </div>
+</form>
+</div>
