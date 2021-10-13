@@ -34,14 +34,14 @@
                 <td>@employee.Position.ToString()</td>
                 <td>@employee.Company.Name</td>
                 <td>
-                    <div class="row">
-                        <div>
+                    <div class="row col-12">
+                        <div class="col-6">
                             <a asp-controller="Employees" asp-action="Edit"
                                asp-route-id="@employee.Id" type="button" class="btn btn-success">
                                 Edit
                             </a>
                         </div>
-                        <div class="pl-2">
+                        <div class="pl-2 col-6">
                             <a asp-controller="Employees" asp-action="Delete"
                                asp-route-id="@employee.Id" type="button" class="btn btn-dark">
                                 Delete

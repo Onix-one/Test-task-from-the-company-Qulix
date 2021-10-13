@@ -23,17 +23,17 @@ namespace ProjectZ.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            try
-            {
+            //try
+            //{
                 var companies =
                     _mapper.MapCompaniesToCompaniesViewModel(await _companyService.GetAllAsync());
                 return View(companies);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError($"Method didn't work({e.Message}), {e.TargetSite}, {DateTime.Now}");
-                return RedirectToAction("Error", "Home");
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    _logger.LogError($"Method didn't work({e.Message}), {e.TargetSite}, {DateTime.Now}");
+            //    return RedirectToAction("Error", "Home");
+            //}
         }
         [HttpGet]
         public IActionResult Edit(int? id)
