@@ -87,6 +87,7 @@ Any improvements to the functionality of the app are greatly appreciated. (For e
 devices of an employee to several companies, adding sorting or filtering, performing
 validation of the input data, etc.) - if this does not conflict with the quality of development.
 The application must have a web interface.
+
 The application must be implemented with the following restrictions:
 - Three-layer architecture;
 - Using the best practices and recommendations;
@@ -97,6 +98,7 @@ The application must be implemented with the following restrictions:
 - The use of third-party libraries is prohibited (including mappers, containers, etc. If there is a need for them, you must implement them yourself), except for libraries for accessing data.
 - To access data, you need to use pure ADO.NET or a very light ORM (not LINQ,
 not EF, not NHibernate and the like).
+
 * Using ADO.NET and avoiding third party libraries is very important because will allow us to evaluate your work, the ability to correctly design systems, as well as fundamental knowledge of many parameters.
 
 
