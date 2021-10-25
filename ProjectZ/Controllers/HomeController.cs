@@ -1,13 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectZ.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using ProjectZ.BLL.Enums;
-using ProjectZ.BLL.Models;
 
 namespace ProjectZ.Controllers
 {

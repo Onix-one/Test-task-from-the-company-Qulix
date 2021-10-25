@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProjectZ.BLL\ProjectZ.BLL.csproj" />
-    <ProjectReference Include="..\ProjectZ.DAL.ADO.NET\ProjectZ.DAL.ADO.NET.csproj" />
+    <ProjectReference Include="..\ProjectZ.DAL.Dapper\ProjectZ.DAL.Dapper.csproj" />
   </ItemGroup>
 
 </Project>

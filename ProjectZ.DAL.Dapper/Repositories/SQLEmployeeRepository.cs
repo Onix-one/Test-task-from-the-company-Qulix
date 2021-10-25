@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
 using ProjectZ.BLL.Models;
-using ProjectZ.DAL.ADO.NET.Mapper;
-using ProjectZ.DAL.ADO.NET.Models;
+using ProjectZ.DAL.Dapper.Mapper;
+using ProjectZ.DAL.Dapper.Models;
 using ProjectZ.DAL.Interfaces;
 
-namespace ProjectZ.DAL.ADO.NET.Repositories
+namespace ProjectZ.DAL.Dapper.Repositories
 {
     public class SqlEmployeeRepository : IRepository<Employee>
     {

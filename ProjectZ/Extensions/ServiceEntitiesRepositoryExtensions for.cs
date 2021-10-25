@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using ProjectZ.BLL.Models;
-using ProjectZ.DAL.ADO.NET.Repositories;
+using ProjectZ.DAL.Dapper.Repositories;
 using ProjectZ.DAL.Interfaces;
 
 namespace ProjectZ.Extensions

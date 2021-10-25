@@ -1,4 +1,3 @@
-
 namespace ProjectZ.Models
 {
     public class ErrorViewModel
