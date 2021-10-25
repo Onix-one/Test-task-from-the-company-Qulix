@@ -4,8 +4,10 @@ How to start:
 2) Use file ProjectZDb.sql into Microsoft SQL Server Management Studio 18 (After that, a full database will be generated.)
 3) Run the project in Visual Studio
 # SQL script ProjectZDb.sql is located into folder ProjectZ
-Develop an application for registering employees of companies.
 
+
+# Task description.
+Develop an application for registering employees of companies.
 
 The application must allow the following data to be entered, edited and deleted:
 1. Employee
@@ -102,7 +104,3 @@ The project should include:
 Source codes should be neatly formatted, all interface methods should contain comments describing their purpose, and a consistent code naming and formatting system is encouraged. You must demonstrate your “programming culture” to the maximum extent possible.
 An explanatory note describing how to install and work with the application is encouraged.
 One day is usually allotted for the completion of such a task.
-
-
-
-
