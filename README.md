@@ -98,6 +98,8 @@ The application must be implemented with the following restrictions:
 - To access data, you need to use pure ADO.NET or a very light ORM (not LINQ,
 not EF, not NHibernate and the like).
 * Using ADO.NET and avoiding third party libraries is very important because will allow us to evaluate your work, the ability to correctly design systems, as well as fundamental knowledge of many parameters.
+
+
 The project should include:
 - all files required to build and run the application.
 - script (s) to automatically build and install the application and create a database.
